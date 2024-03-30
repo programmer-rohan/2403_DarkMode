@@ -1,0 +1,47 @@
+<mat-toolbar color="primary">
+  <span>CRUD Application</span>
+
+  <div class="divider"></div>
+
+  <mat-slide-toggle color="accent" [checked]="isDark"
+                    (change)="setTheme($event.checked)">
+    Dark Mode
+  </mat-slide-toggle>
+
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>account_circle</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>Login</button>
+    <button mat-menu-item>Logout</button>
+  </mat-menu>
+</mat-toolbar>
+
+<mat-drawer-container>
+  <mat-drawer mode="side" opened>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/link1">Home</a>
+      <a mat-list-item routerLink="/link1">View</a>
+      <a mat-list-item routerLink="/link1">About</a>
+      <a mat-list-item routerLink="/link1">Contact</a>
+    </mat-nav-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <h2>List of People</h2>
+
+    <mat-list role="list" class="mat-elevation-z8">
+
+      <mat-list-item> Rohan </mat-list-item>
+      <mat-list-item> Atharva </mat-list-item>
+      <mat-list-item> Kunal </mat-list-item>
+      <mat-list-item> Mayur </mat-list-item>
+      <mat-list-item> Yash </mat-list-item>
+
+    </mat-list>
+
+    <button mat-raised-button color="accent" (click)="save()">
+      Save
+    </button>
+
+  </mat-drawer-content>
+</mat-drawer-container>

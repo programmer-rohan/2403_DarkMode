@@ -1,0 +1,35 @@
+:host {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.divider {
+  flex: 1 1 auto;
+}
+
+mat-drawer-container {
+  flex: 1 1 auto;
+
+  h2 {
+    color: var(--on-surface);
+  }
+
+  mat-drawer {
+    width: 150px;
+    padding: 1rem;
+  }
+
+  mat-drawer-content {
+    padding: 1rem;
+  }
+
+  button {
+    width: 300px;
+    margin-top: 1rem;
+  }
+
+  mat-list {
+    width: 300px;
+  }
+}
